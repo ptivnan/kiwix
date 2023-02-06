@@ -21,4 +21,4 @@ WORKDIR /kiwix
 EXPOSE 8080
 
 # Start the Kiwix server
-ENTRYPOINT ["/bin/sh", "serve.sh"]
+ENTRYPOINT ["/bin/sh", "/startup/serve.sh"]
