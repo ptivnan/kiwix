@@ -7,13 +7,15 @@ RUN apk update \
 RUN apk add wget \
     libzim \
     kiwix-tools
-
-# Set the working directory
-WORKDIR /kiwix
+# Create a startup directory for the serve.sh script
+RUN mkdir /startup
+WORKDIR /startup
 
 # Copy the serve script
 COPY serve.sh .
-RUN touch library.xml
+
+# Set the working directory
+WORKDIR /kiwix
 
 # Expose port
 EXPOSE 8080
