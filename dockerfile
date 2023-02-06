@@ -14,9 +14,6 @@ WORKDIR /kiwix
 # Copy the serve script
 COPY serve.sh .
 
-# Get a zim file to test
-RUN wget https://download.kiwix.org/zim/wikipedia/wikipedia_en_100_maxi_2023-01.zim
-
 # Expose port
 EXPOSE 8080
 
