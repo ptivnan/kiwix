@@ -7,12 +7,6 @@ RUN apk update \
 RUN apk add wget \
     libzim \
     kiwix-tools
-# Create a startup directory for the serve.sh script
-RUN mkdir /startup
-WORKDIR /startup
-
-# Copy the serve script
-COPY serve.sh .
 
 # Set the working directory
 WORKDIR /kiwix
