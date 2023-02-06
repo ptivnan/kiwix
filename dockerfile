@@ -21,4 +21,4 @@ WORKDIR /kiwix
 EXPOSE 8080
 
 # Start the Kiwix server
-ENTRYPOINT ["/bin/sh", "/startup/serve.sh"]
+ENTRYPOINT ["/bin/sh", "kiwix-manage /kiwix/library.xml add *.zim  && kiwix-serve -M -v --library /kiwix/library.xml --port 8080"]
