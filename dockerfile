@@ -15,7 +15,7 @@ WORKDIR /startup
 COPY serve.sh .
 
 # Set the working directory
-WORKDIR /kiwix-library
+RUN mkdir /kiwix-library
 WORKDIR /kiwix
 
 # Expose port
