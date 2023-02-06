@@ -13,6 +13,7 @@ WORKDIR /kiwix
 
 # Copy the serve script
 COPY serve.sh .
+RUN touch library.xml
 
 # Expose port
 EXPOSE 8080
